@@ -1,0 +1,35 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@400;500;600&display=swap');
+
+
+@import "tailwindcss";
+
+
+body{
+  background-color: rgba(255, 157, 125, 0.7);
+  
+}
+.font-instrument {
+  font-family: 'Instrument Sans', sans-serif;
+}
+.font-island {
+  font-family: 'Island Moments', cursive;
+}
+.font-halant {
+  font-family: 'Halant', serif;
+}
+html,
+body {
+ 
+  overflow: auto;
+  -ms-overflow-style: none;  
+  scrollbar-width: none;     
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
