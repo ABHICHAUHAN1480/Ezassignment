@@ -23,7 +23,7 @@ import page3img1 from '../assets/Art Curation Icons 03.svg'
 import page3img3 from '../assets/Art Curation Icons 04.svg'
 
 
-const Otherservies = ({ page = "page3" }) => {
+const Otherservies = ({ page = "page1",setServiceSelected  }) => {
     const listSets={
         page1: ["Documentaries","Corporate Videos","2D Animation Videos","3D Animation Videos"],
         page2: ["Branding & Communication","Market Mapping","Content Management","Social Media Management","Rebranding"],
@@ -52,12 +52,12 @@ const Otherservies = ({ page = "page3" }) => {
   const currentFrame = frameSets[page];
 
     return (
-        <div className='min-w-screen min-h-screen relative mt-0'>
-            <h1 className='font-halant font-normal text-center text-3xl mt-20'>"Filmmaking is a chance to live many lifetimes." - Robert Altman</h1>
+        <div className='min-w-screen min-h-screen relative -mt-10'>
+            <h1 className='font-halant font-normal text-center text-3xl '>"Filmmaking is a chance to live many lifetimes." - Robert Altman</h1>
             <img src={vector5} alt="Vector 5" className='mx-auto w-1/2' />
 
             <div className=' w-2/3 mx-auto mt-10 relative'>
-                <button className='font-instrument text-[#F15D2B] font-normal border border-[#F15D2B] rounded-full cur px-4 py-3 flex items-center cursor-pointer '><img src={left} alt="Left Arrow" className='inline-block mr-2' />Back</button>
+                <button onClick={()=>setServiceSelected(0)}  className='font-instrument text-[#F15D2B] font-normal border border-[#F15D2B] rounded-full cur px-4 py-3 flex items-center cursor-pointer '><img src={left} alt="Left Arrow" className='inline-block mr-2' />Back</button>
                 <div className='flex'>
                     <img src={currentFrame} alt="Service Frame 1" className='w-2/5 ml-25' />
                     <div className='w-1/2 font-instrument font-normal text-2xl '>

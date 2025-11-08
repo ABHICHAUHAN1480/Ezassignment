@@ -6,7 +6,7 @@ import AboutUs from '../components/AboutUs'
 import Services from './Services'
 import Contact from '../components/Contact'
 import Portfolio from '../components/Portfolio'
-import Otherservies from '../servicesComponents/Otherservies'
+
 const Home = () => {
   return (
     <div className=''>
@@ -17,7 +17,7 @@ const Home = () => {
         <Services />
         <Portfolio />
         <Contact />
-        <Otherservies />
+      
     </div>
   )
 }

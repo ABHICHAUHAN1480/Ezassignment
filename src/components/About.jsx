@@ -15,7 +15,7 @@ const About = () => {
         <img
           src={group9}
           alt="Group 9"
-          className="object-contain w-[55%] sm:w-[50%] md:w-[65%] lg:w-[70%] ml-0 md:ml-30 transition-all duration-300"
+          className="object-contain w-[55%] sm:w-[50%] md:w-[65%] lg:w-[70%]  ml-0 md:ml-30  transition-all duration-300"
         />
         <img
           src={insdiagate}
