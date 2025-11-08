@@ -59,7 +59,7 @@ const Otherservies = ({ page = "page1",setServiceSelected  }) => {
             <div className=' w-2/3 mx-auto mt-10 relative'>
                 <button onClick={()=>setServiceSelected(0)}  className='font-instrument text-[#F15D2B] font-normal border border-[#F15D2B] rounded-full cur px-4 py-3 flex items-center cursor-pointer '><img src={left} alt="Left Arrow" className='inline-block mr-2' />Back</button>
                 <div className='flex'>
-                    <img src={currentFrame} alt="Service Frame 1" className='w-2/5 ml-25' />
+                    <img src={currentFrame} alt="Service Frame 1" className='w-[80%] sm:w-[65%] md:w-[45%] lg:w-[40%]  ml-25' />
                     <div className='w-1/2 font-instrument font-normal text-2xl '>
                         <p className=' mt-7'>
                             <span>{currentText[0]}</span><br />

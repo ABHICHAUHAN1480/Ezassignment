@@ -7,8 +7,8 @@ import frame23 from '../assets/Frame 23.png'
 const AboutUs = () => {
     return (
         <div className='min-w-screen min-h-screen relative'>
-            <div className='w-1/2 right-12 absolute top-24'>
-                <p className="font-island font-normal not-italic text-7xl leading-[100%] tracking-[0] text-center ">
+            <div className='w-1/2 right-12 absolute top-6 lg:top-24'>
+                <p className="font-island font-normal not-italic text-[28px] sm:text-[36px] md:text-[56px] lg:text-[64px] xl:text-[70px] leading-[110%] text-center md:text-right">
                     Every project is more than just a brief - it’s a new chapter waiting to be written.
                     Together, we've crafted tales that inspire, connect, and endure.
                 </p>
