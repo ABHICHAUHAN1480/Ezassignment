@@ -8,16 +8,25 @@ import Contact from '../components/Contact'
 import Portfolio from '../components/Portfolio'
 
 const Home = () => {
+  
   return (
     <div className=''>
         <div className='fixed top-0 left-0 w-full z-20'><Navbar /></div>
-        <Hero />
-        <About />
+       <div id='hero'><Hero /></div>
+        <div id='about'>
+          <About />
+        </div>
         <AboutUs />
-        <Services />
-        <Portfolio />
-        <Contact />
-      
+        <div id='services'>
+           <Services />
+        </div>
+       <div id='portfolio'>
+           <Portfolio />
+       </div>
+       <div id='contact'>
+           <Contact />
+       </div>
+
     </div>
   )
 }

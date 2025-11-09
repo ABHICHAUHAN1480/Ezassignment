@@ -10,25 +10,54 @@ import image8 from '../assets/image 8.png'
 
 const MainServicePage = ({ setServiceSelected }) => {
     return (
-        <div className='min-w-screen min-h-screen relative'>
-            <p className="font-halant  mt-24 font-normal not-italic text-4xl leading-[100%] tracking-[0] text-center">
+        <div className='w-full min-h-screen relative pb-32 md:pb-24'>
+           
+            <p className="font-halant mt-16 md:mt-24 font-normal not-italic text-2xl sm:text-3xl md:text-4xl leading-[100%] tracking-[0] text-center px-4">
                 The storyboard reveals the breadth of our craft.
             </p>
-            
-            <img className='mx-auto w-1/2 ' src={vector5} alt="decorative line" />
-            <div className='flex justify-center gap-10 mt-10 '>
-                <span className='w-[29%] h-1/3 relative hover:scale-95 cursor-pointer' onMouseEnter={()=>setServiceSelected(1)}>
-                <img src={image6} alt ="images" className='absolute h-20 ml-5' />
-                <img src={frame31} alt ="images"   />
-                </span> 
-                <span className='w-[25%] mt-12 h-1/3 relative hover:scale-95 cursor-pointer' onMouseEnter={()=>setServiceSelected(2)}>
-                <img src={image8} alt ="images" className='absolute h-20 ml-20 -mt-5' />
-                <img src={frame31_1} alt ="images"/></span>
-                <span className='w-[29%] h-1/3 relative hover:scale-95 cursor-pointer' onMouseEnter={()=>setServiceSelected(3)}>
-                <img src={image7} alt ="images" className='absolute h-20 right-6' />
-                <img src={frame31_2} alt ="images" /></span>
+
+         
+            <img className='mx-auto w-3/4 sm:w-2/3 md:w-1/2 mt-3' src={vector5} alt="decorative line" />
+
+         
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 mt-10 px-4 md:px-8 place-items-center md:place-items-stretch'>
+              
+                <button
+                    type="button"
+                    className='group relative w-full max-w-[420px] md:max-w-none cursor-pointer transition-transform duration-200 hover:scale-[0.98]'
+                    onMouseEnter={() => setServiceSelected(1)}
+                    onClick={() => setServiceSelected(1)}
+                    aria-label="Explore Service 1"
+                >
+                    <img src={image6} alt="decorative sticker" className='absolute top-0 md:top-[6%]  left-[12%] w-24 sm:w-32 md:w-28 lg:w-38 pointer-events-none select-none' />
+                    <img src={frame31} alt="Service 1" className='w-[90%] h-auto block' />
+                </button>
+
+                
+                <button
+                    type="button"
+                    className='group relative w-full max-w-[420px] md:max-w-none cursor-pointer transition-transform duration-200 hover:scale-[0.98] md:mt-12'
+                    onClick={() => setServiceSelected(2)}
+                    aria-label="Explore Service 2"
+                >
+                    <img src={image8} alt="decorative sticker" className='absolute -top-[1%] left-[45%] -translate-x-1/2  w-24 sm:w-32 md:w-28 lg:w-38 pointer-events-none select-none' />
+                    <img src={frame31_1} alt="Service 2" className='w-[90%] h-auto block' />
+                </button>
+
+              
+                <button
+                    type="button"
+                    className='group relative w-full max-w-[420px] md:max-w-none cursor-pointer transition-transform duration-200 hover:scale-[0.98]'
+                    onClick={() => setServiceSelected(3)}
+                    aria-label="Explore Service 3"
+                >
+                    <img src={image7} alt="decorative sticker" className='absolute top-[2%] md:top-[6%] right-[22%]  w-24 sm:w-32 md:w-28 lg:w-38 pointer-events-none select-none' />
+                    <img src={frame31_2} alt="Service 3" className='w-[90%] h-auto block' />
+                </button>
             </div>
-             <img className='absolute bottom-24 ' src={frame33} alt="decorative line" />
+
+            <img className='md:hidden mx-auto mt-12 w-2/3' src={frame33} alt="decorative line" />
+            <img className='hidden md:block absolute left-1/2 -translate-x-1/2 bottom-10' src={frame33} alt="decorative line" />
         </div>
     )
 }

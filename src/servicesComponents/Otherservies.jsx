@@ -52,36 +52,39 @@ const Otherservies = ({ page = "page1",setServiceSelected  }) => {
   const currentFrame = frameSets[page];
 
     return (
-        <div className='min-w-screen min-h-screen relative -mt-10'>
-            <h1 className='font-halant font-normal text-center text-3xl '>"Filmmaking is a chance to live many lifetimes." - Robert Altman</h1>
-            <img src={vector5} alt="Vector 5" className='mx-auto w-1/2' />
+        <div className='min-h-screen relative -mt-10 px-4'>
+            <h1 className='font-halant font-normal text-center text-3xl'>"Filmmaking is a chance to live many lifetimes." - Robert Altman</h1>
+            <img src={vector5} alt="Vector 5" className='mx-auto w-1/2 max-w-[420px] mt-4' />
 
-            <div className=' w-2/3 mx-auto mt-10 relative'>
-                <button onClick={()=>setServiceSelected(0)}  className='font-instrument text-[#F15D2B] font-normal border border-[#F15D2B] rounded-full cur px-4 py-3 flex items-center cursor-pointer '><img src={left} alt="Left Arrow" className='inline-block mr-2' />Back</button>
-                <div className='flex'>
-                    <img src={currentFrame} alt="Service Frame 1" className='w-[80%] sm:w-[65%] md:w-[45%] lg:w-[40%]  ml-25' />
-                    <div className='w-1/2 font-instrument font-normal text-2xl '>
-                        <p className=' mt-7'>
+            <div className='max-w-5xl mx-auto mt-10 relative w-full'>
+                <button onClick={()=>setServiceSelected(0)} className='font-instrument text-[#F15D2B] font-normal border border-[#F15D2B] rounded-full px-4 py-3 flex items-center cursor-pointer animate-pulse-scale'><img src={left} alt="Left Arrow" className='inline-block mr-2' />Back</button>
+
+                {/* Content: stack on mobile, side-by-side on md+ */}
+                <div className='flex flex-col md:flex-row items-start md:items-center gap-6 mt-6'>
+                    <img src={currentFrame} alt="Service Frame 1" className='w-full md:w-[45%] lg:w-[40%] mx-auto' />
+
+                    <div className='w-full md:w-1/2 font-instrument font-normal text-base md:text-2xl'>
+                        <p className='mt-4 md:mt-7'>
                             <span>{currentText[0]}</span><br />
                             <span>{currentText[1]}</span><br />
                             <span>{currentText[2]}:</span>
                         </p>
-                            <ul>
-                                {currentList.map((item, index) => (
-                                    <li key={index} className='mt-2 list-disc list-inside ml-4'>{item}</li>
-                                ))}
-                            </ul>
+                        <ul className='mt-4 list-disc list-inside space-y-2'>
+                            {currentList.map((item, index) => (
+                                <li key={index} className='ml-4'>{item}</li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
-                 <p className='mx-auto text-center ml-24 font-instrument font-normal text-xl '>Explore more <br/> <img src={arrow} alt="Arrow" className='mx-auto mt-2 ' /></p>
-                <img src={currentImages[0]} alt="Page 1 Image 1" className='absolute top-0 right-0 -mr-30 w-1/10' />
 
-                <img src={currentImages[2]} alt="Page 1 Image 2" className='absolute right-0 w-1/10 -mr-30 top-3/4' />
-                <img src={currentImages[1]} alt="Page 1 Image 3" className='absolute right-0 w-1/10 top-1/2 ' />
+                <p className='mx-auto text-center mt-6 font-instrument font-normal text-xl'>Explore more <br/> <img src={arrow} alt="Arrow" className='mx-auto mt-2' /></p>
 
-                <img src={currentImages[3]} alt="Page 1 Image 4" className='absolute top-2/3 ' />
+                {/* Decorative images - show on md+ only to avoid overlap on small screens */}
+                <img src={currentImages[0]} alt="Decorative 1" className='hidden md:block absolute  top-4 right-8 w-16 md:w-24 lg:w-28' />
+                <img src={currentImages[2]} alt="Decorative 2" className='hidden md:block absolute right-8 w-16 md:w-24 lg:w-28 top-3/4' />
+                <img src={currentImages[1]} alt="Decorative 3" className='hidden md:block absolute right-8 w-16 md:w-24 lg:w-28 top-1/2' />
+                <img src={currentImages[3]} alt="Decorative 4" className='hidden md:block absolute -left-10 top-2/3 w-16 md:w-24 lg:w-28' />
             </div>
-           
         </div>
     )
 }

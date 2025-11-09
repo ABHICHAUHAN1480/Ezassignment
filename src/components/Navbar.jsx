@@ -1,19 +1,28 @@
 import React, { useState } from "react";
-import frame1 from "../assets/Frame 1.png"; 
-import frame2 from "../assets/Vector.png"; 
-import letstalk from "../assets/Frame 2.png"; 
-import frame4 from "../assets/Frame 4.png"; 
+import frame1 from "../assets/Frame 1.png";
+import frame2 from "../assets/Vector.png";
+import letstalk from "../assets/Frame 2.png";
+import frame4 from "../assets/Frame 4.png";
 import bg from "../assets/BG.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      console.log("Scrolling to section:", id);
+      setIsOpen(false);
+    }else {
+      console.log("Section not found:", id);
+    }
+  };
   return (
     <nav className="p-5 font-instrument text-[18px] font-normal not-italic leading-[100%] tracking-[0] relative  z-50">
-        <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between">
         <img className="h-10" src={frame4} alt="logo" />
 
-      
+
         <button
           className="block md:hidden p-2"
           onClick={() => setIsOpen(!isOpen)}
@@ -28,19 +37,20 @@ const Navbar = () => {
         <ul className="hidden md:flex gap-6 items-center absolute right-5 top-5">
           {isOpen && (
             <>
-              <li className="cursor-pointer hover:text-[#F15D2B] transition-colors">
+              <li className="cursor-pointer hover:text-[#F15D2B] transition-colors"
+                onClick={() => scrollToSection("services")}>
                 Services
               </li>
-              <li className="cursor-pointer hover:text-[#F15D2B] transition-colors">
+              <li onClick={() => scrollToSection("portfolio")} className="cursor-pointer hover:text-[#F15D2B] transition-colors">
                 Their Stories
               </li>
-              <li className="cursor-pointer hover:text-[#F15D2B] transition-colors">
+              <li onClick={()=>scrollToSection("about")}  className="cursor-pointer hover:text-[#F15D2B] transition-colors">
                 Our Story
               </li>
-              <li className="cursor-pointer hover:text-[#F15D2B] transition-colors">
+              <li className="cursor-pointer hover:text-[#F15D2B] transition-colors" onClick={() => scrollToSection("hero")}>
                 Varnan
               </li>
-              <li>
+              <li onClick={() => scrollToSection("contact")}>
                 <img
                   src={letstalk}
                   alt="Let's talk"
@@ -52,7 +62,7 @@ const Navbar = () => {
 
           <li>
             <img
-              src={isOpen ? frame2 : frame1} 
+              src={isOpen ? frame2 : frame1}
               alt="menu icon"
               className="cursor-pointer hover:scale-105 transition-transform"
               onClick={() => setIsOpen(!isOpen)}
@@ -62,7 +72,7 @@ const Navbar = () => {
 
       </div>
 
-    
+
       {isOpen && (
         <div className="md:hidden absolute top-[70px] left-0 w-full shadow-md py-6 transition-all duration-500 ease-in-out">
           <img
@@ -73,25 +83,25 @@ const Navbar = () => {
           <ul className="flex flex-col items-center gap-6 text-[18px]">
             <li
               className="cursor-pointer hover:text-[#F15D2B] transition-colors"
-              onClick={() => setIsOpen(false)}
+              onClick={() => scrollToSection("services")}
             >
               Services
             </li>
             <li
               className="cursor-pointer hover:text-[#F15D2B] transition-colors"
-              onClick={() => setIsOpen(false)}
+              onClick={() => scrollToSection("portfolio")}
             >
               Their Stories
             </li>
             <li
               className="cursor-pointer hover:text-[#F15D2B] transition-colors"
-              onClick={() => setIsOpen(false)}
+              onClick={() => scrollToSection("about")}
             >
               Our Story
             </li>
             <li
               className="cursor-pointer hover:text-[#F15D2B] transition-colors"
-              onClick={() => setIsOpen(false)}
+              onClick={() => scrollToSection("hero")}
             >
               Varnan
             </li>
@@ -100,7 +110,7 @@ const Navbar = () => {
                 src={letstalk}
                 alt="Let's talk"
                 className="h-8 cursor-pointer hover:scale-105 transition-transform"
-                onClick={() => setIsOpen(false)}
+                onClick={() => scrollToSection("contact")}
               />
             </li>
           </ul>
