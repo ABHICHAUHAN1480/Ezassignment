@@ -6,11 +6,6 @@
 
 @import "tailwindcss";
 
-
-body{
-  background-color: rgba(255, 157, 125, 0.7);
-  
-}
 .font-instrument {
   font-family: 'Instrument Sans', sans-serif;
 }
