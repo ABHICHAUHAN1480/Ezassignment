@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Home from './pages/Home'
-import bg from './assets/bg.png'
+import bg from './assets/BG.png'
 
 function App() {
   
