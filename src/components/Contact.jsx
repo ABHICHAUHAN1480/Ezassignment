@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-import Footervector from '../assets/Footer vector.png'
-import Footervector1 from '../assets/Footer vector (1).png'
+import Footervector from '../assets/Footer Vector.png'
+import Footervector1 from '../assets/Footer Vector (1).png'
 import { ToastContainer, toast } from 'react-toastify';
 const Contact = () => {
   const [formData, setFormData] = useState({
