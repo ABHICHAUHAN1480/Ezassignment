@@ -1,20 +1,5 @@
 # EZ Labs Frontend Assignment — Varnan Website
 
-This project is built as part of the **EZ Labs Frontend Assignment (EZASSIGNMENT)**.
-It’s a **single-page responsive web application** built using **React (Vite)** and **Tailwind CSS**, recreating the provided **Figma design** with a fully functional **contact form** integrated with the provided API endpoint.
-
----
-
-## 🔗 Live Demo
-
-🔗 [View Deployed App](https://notliveyet.com)
-
----
-
-## 🎯 Objective
-
-# EZ Labs Frontend Assignment — Varnan Website
-
 This project was built as part of the **EZ Labs Frontend Assignment (EZASSIGNMENT)**.
 It’s a **responsive single-page web application** built with **React (Vite)** and **Tailwind CSS**, recreating the provided **Figma design**, including a fully functional **contact form** integrated with the provided API endpoint.
 
@@ -22,7 +7,7 @@ It’s a **responsive single-page web application** built with **React (Vite)** 
 
 ## 🔗 Live Demo
 
-🔗 [View Deployed App](https://notliveyet.com)
+🔗 [View Deployed App](https://ezassignment-ysd6.vercel.app/)
 
 ---
 
