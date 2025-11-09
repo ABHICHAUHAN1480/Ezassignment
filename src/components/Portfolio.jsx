@@ -1,6 +1,6 @@
 import React from 'react'
 import camimg from '../assets/Cam Group.svg'
-import foot from '../assets/PortfolioVector.png'
+import foot from '../assets/portfolioVector.png'
 import group11 from '../assets/Group 11.png'
 const Portfolio = () => {
   return (
