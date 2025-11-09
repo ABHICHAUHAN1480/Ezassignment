@@ -1,7 +1,7 @@
 import React from 'react'
 
 import vector5 from '../assets/Vector 5.svg'
-import left from '../assets/Chevron Left.png'
+import left from '../assets/Chevron left.png'
 import serviceframe1 from '../assets/serviceframe1.png'
 import serviceframe2 from '../assets/serviceframe2.png'
 import serviceframe3 from '../assets/serviceframe3.png'
