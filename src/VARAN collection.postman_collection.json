@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "276e3946-641e-4f94-92a5-942151576d9c",
+		"name": "VARAN collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38967340",
+		"_collection_link": "https://www.postman.com/abhi9953/workspace/ezassignment/collection/38967340-276e3946-641e-4f94-92a5-942151576d9c?action=share&source=collection_link&creator=38967340"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"hsatyamrav@gmail.com\",\"message\":\"kjhgcgj\",\"name\":\"Amit\",\"phone\":\"\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://vernanbackend.ezlab.in/api/contact-us/",
+					"protocol": "https",
+					"host": [
+						"vernanbackend",
+						"ezlab",
+						"in"
+					],
+					"path": [
+						"api",
+						"contact-us",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\":\"hsatyamrav@gmail.com\",\"message\":\"kjhgcgj\",\"name\":\"Amit\",\"phone\":\"\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://vernanbackend.ezlab.in/api/contact-us/",
+							"protocol": "https",
+							"host": [
+								"vernanbackend",
+								"ezlab",
+								"in"
+							],
+							"path": [
+								"api",
+								"contact-us",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 09 Nov 2025 08:51:24 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "248"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.3"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie, origin"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, POST"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Contact request submitted and email sent successfully\",\n    \"data\": {\n        \"id\": 4235,\n        \"name\": \"Amit\",\n        \"email\": \"hsatyamrav@gmail.com\",\n        \"phone\": \"\",\n        \"message\": \"kjhgcgj\",\n        \"created_at\": \"2025-11-09T08:51:22.717686Z\",\n        \"updated_at\": \"2025-11-09T08:51:22.717704Z\"\n    }\n}"
+				}
+			]
+		}
+	]
+}
